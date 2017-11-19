@@ -1,0 +1,483 @@
+/* Eric Meyer's CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Styles */
+
+body {
+  font-family: 'Mallanna', sans-serif;
+  color: rgba(0,0,0,0.7);
+}
+h1 {
+  font-size: 3.4em;
+  font-weight: bold;
+  color: black;
+}
+h2 {
+  font-size: 2.2em;
+  font-weight:bold;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+p, a {
+  font-size: 1.4em;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+}
+header {
+  background-color: #2C8437;
+  color: black;
+}
+
+@media only screen and (min-width:620px) {
+  .main > div:nth-child(odd) {
+    background-color: #10631B;
+  }
+}
+
+
+.color-primary-0 { color: #2C8437 }	/* Main Primary color */
+.color-primary-1 { color: #84C68C }
+.color-primary-2 { color: #52A55D }
+.color-primary-3 { color: #10631B }
+.color-primary-4 { color: #004208 }
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* The navigation top bar */
+
+header {
+  height:64px;
+  display:flex;
+  align-items: center;
+}
+header .logo {
+  display:flex;
+  align-items:center;
+}
+header li:hover, footer li:hover {
+  cursor:pointer;
+}
+header li:hover {
+  background-color: #84C68C;
+}
+@media only screen and (min-width:771px) and (max-width:850px) {
+  header {
+    font-size: 90%;
+  }
+}
+@media only screen and (min-width:721px) and (max-width:770px) {
+  header {
+    font-size: 83%;
+  }
+}
+@media only screen and (min-width:651px) and (max-width:720px) {
+  header {
+    font-size: 72%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header > .logo, header nav a span, header nav li.mobile-exclude {
+    display:none;
+  }
+  header nav {
+    width: 100%;
+  }
+  header ul {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header nav li {
+    height: 100%;
+    flex-grow:1;
+    padding-top: 16px;
+  }
+  header nav li a {
+    display:block;
+    width: 32px;
+    height: 32px;
+    margin:0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8px;
+  }
+  header nav .logo {
+    background-image: url('../images/ic-logo.svg');
+  }
+  header nav .on-campus {
+    background-image: url('../images/ic-on-campus.svg');
+  }
+  header nav .online {
+    background-image: url('../images/ic-online.svg');
+  }
+  header nav .sign-in {
+    background-image: url('../images/ic-login.svg');
+  }
+}
+@media only screen and (min-width: 651px) {
+  header {
+    padding: 0 8px 0 24px;
+  }
+  li {
+    transition: background-color 0.3s;
+  }
+  header nav .logo {
+    display:none;
+  }
+  header .logo img {
+    height:32px;
+    display:inline-block;
+  }
+  header .logo .name {
+    position:relative;
+    top:-0.1em;
+    text-transform: uppercase;
+    font-family: 'Suranna', serif;
+    font-size:1.4em;
+  }
+  header .logo .name .proper {
+    font-weight:bold;
+  }
+  header nav {
+    flex-grow:1;
+    margin-left: 24px;
+  }
+  header li {
+    list-style:none;
+    padding: 8px 16px 8px 16px;
+    text-align:center;
+  }
+  header ul {
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+  }
+}
+
+/* the remainder */
+
+.main {
+  width: 100%;
+}
+
+/* The first panel */
+
+.biggie {
+  background-color: #10631B;
+}
+.biggie .text .button {
+  text-align:center;
+  background-color: #84C68C;
+  font-size: 2em;
+  font-weight:bold;
+  margin-top:1em;
+  padding-top:8px;
+  padding-bottom:8px;
+  border-radius:8px;
+  transition: background-color 0.35s, color 0.8s;
+  border: solid 2px #2C8437;
+}
+.biggie .text .button:hover {
+  background-color:#004208;
+  color:#52A55D;
+  cursor:pointer;
+}
+@media only screen and (max-width:949px) {
+  .biggie img {
+    width: 100%;
+    height: auto;
+  }
+  .biggie .text {
+    margin: 0 16px;
+    padding: 32px 0;
+  }
+  .biggie .text h2 {
+    margin-top: 32px;
+    margin-bottom:24px;
+  }
+  .biggie .text .button {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width:950px) {
+  .biggie {
+    display:flex;
+    align-items: center;
+    padding: 32px 24px;
+  }
+  .biggie .container {
+    width:60%;
+    height:auto;
+    overflow:hidden;
+  }
+  .biggie img {
+    max-width:60%;
+    height:auto;
+    display:block;
+  }
+  .biggie .text {
+    padding-left: 12px;
+    margin-left: 12px;
+    max-width:30%;
+  }
+  .biggie .text h2 {
+    margin-top:0.6em;
+  }
+}
+
+/* The second panel */
+
+p.attribution {
+  font-size: 0.9em;
+  margin-top:1em;
+}
+.sidestory {
+  transition: background-color 0.3s, color 0.3s;
+}
+.storypanel .sidestory:hover {
+  background-color: #52A55D;
+}
+@media only screen and (max-width:800px) {
+  .panel-2 .full {
+    display:none;
+  }
+  .panel-2 .mobile {
+    width:100%;
+    height: auto;
+  }
+  .panel-2 .mainstory {
+    display:none;
+  }
+  .panel-2 .storycontent .sidestories {
+    display:flex;
+    flex-direction: column;
+  }
+  .panel-2 .storycontent .sidestory {
+    padding:16px;
+    margin-bottom:48px;
+  }
+  .panel-2 .storycontent .detail {
+    margin: 16px;
+  }
+  /* last panel */
+  .panel-4 > h1 {
+    padding-top: 32px;
+    margin: 0px 0 16px 0;
+    text-align: center;
+  }
+  .panel-4 video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+  }
+  .panel-4 .sidestories, .panel-4 .mainstory .text {
+    display:none;
+  }
+}
+  .storypanel {
+    padding-top: 32px;
+    padding-bottom:32px;
+  }
+  .storypanel > h1 {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .storypanel .storycontent {
+    display:flex;
+  }
+  .storypanel .storycontent .mainstory {
+    flex-basis:60%;
+    flex-grow:6;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .mainstory img, .mainstory video {
+    width: 100%;
+    height: auto;
+  }
+  .storypanel .storycontent .sidestories {
+    flex-basis:40%;
+    flex-grow:4;
+    border-left: solid 1px #004208;
+  }
+  .storypanel .storycontent .mainstory h1 {
+    margin-top:32px;
+    margin-bottom:24px;
+  }
+  .storypanel .storycontent .sidestory:first-child {
+    border-top: none;
+  }
+  .storypanel .storycontent .sidestory {
+    padding: 16px;
+    border-bottom: solid 1px #004208;
+    border-top: solid 1px #004208;
+    margin-bottom: 1px;
+    display:flex;
+    align-items: center;
+  }
+  .storypanel .storycontent .sidestory img {
+    width:35%;
+    height:auto;
+  }
+  .storypanel .storycontent .sidestory .detail {
+    width: 65%;
+    margin-left: 16px;
+  }
+	@media only screen and (min-width:801px) {
+	  .storypanel .mobile {
+	    display: none;
+	  }
+}
+
+/* the third panel */
+
+.panel-3 h1 {
+  text-align:center;
+}
+.panel-3 .learnbox .detail h2 {
+  color: #004208;
+}
+
+  .panel-3 .learnbox img, .panel-3 .learnbox h3, .panel-3 .learnbox p {
+    display:none;
+  }
+  .panel-3 .learnbox .detail h2 {
+    padding: 16px 16px 24px 16px;
+    margin-bottom:8px;
+    background-color: #52A55D;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  .panel-3 {
+    padding: 0 16px;
+    margin-bottom: 32px;
+  }
+  .panel-3 .learnbox .detail h2:hover {
+    background-color: #2C8437;
+    cursor:pointer;
+  }
+}
+@media only screen and (min-width:501px) {
+  .panel-3 {
+    padding-top: 32px;
+    padding-left: 56px;
+    padding-right:56px;
+  }
+
+  .panel-3 .courses {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-top: 32px;
+  }
+
+  .panel-3 .learnbox img {
+    height:auto;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .panel-3 .learnbox .detail {
+    margin: 16px 16px 24px 16px;
+  }
+  .panel-3 .learnbox:hover {
+    border: solid 8px #84C68C;
+    border-radius: 14px;
+    margin: -8px 8px 24px 8px;
+    opacity: 0.9;
+    cursor:pointer;
+  }
+
+  .panel-3 .learnbox {
+    min-width:265px;
+    flex-basis: 25%;
+    flex-grow:1;
+    margin: 0 16px 32px 16px;
+    background-color: white;
+    border-radius: 6px;
+    transition: border-color 0.2s, opacity 0.2s;
+  }
+}
+
+footer {
+  padding: 16px 24px;
+  display:flex;
+}
+footer .copyright {
+  width: 100%;
+}
+@media only screen and (min-width:481px) {
+  footer {
+    border-top: solid 1px #694f44;
+  }
+  footer .legalese {
+    width: 8em;
+    float:right;
+  }
+  footer ul {
+    list-style:none;
+    display:flex;
+    justify-content: flex-end;
+  }
+  footer ul li {
+    margin-left: 16px;
+  }
+}
+@media only screen and (max-width:480px) {
+  footer .legalese {
+    display:none;
+  }
+}
